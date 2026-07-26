@@ -48,7 +48,6 @@ const NAV_ITEMS = [
   { label: 'News', href: '/news' },
   { label: 'Events', href: '/events' },
   { label: 'Gallery', href: '/gallery' },
-  { label: 'Book a Mass', href: '/booking' },
   { label: 'Contact', href: '/contact' },
 ]
 
