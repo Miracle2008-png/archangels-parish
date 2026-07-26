@@ -130,15 +130,16 @@ export default function HomePage() {
             </h1>
             <p
               style={{
-                color: 'rgba(255,255,255,0.75)',
+                color: 'rgba(255,255,255,0.85)',
                 fontSize: 'clamp(1rem, 2vw, 1.2rem)',
                 lineHeight: 1.7,
                 marginBottom: '2.5rem',
-                maxWidth: '500px',
+                maxWidth: '550px',
               }}
             >
-              A parish family rooted in faith, united in love, and called to serve — 
-              in Satellite Town, Lagos and beyond.
+              With Him - There is Plentiful Redemption.
+              <br />
+              The Archangels - Be Our Defenders.
             </p>
 
             {/* Quick action cards */}
