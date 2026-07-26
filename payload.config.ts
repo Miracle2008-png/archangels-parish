@@ -69,15 +69,22 @@ export default buildConfig({
     },
   }),
 
-  plugins: [
-    vercelBlobStorage({
-      collections: {
-        media: true,
-        downloads: true,
-      },
-      token: process.env.BLOB_READ_WRITE_TOKEN || process.env.BLOB_STORE_ID || '',
-    }),
-  ],
+  plugins: (() => {
+    const blobToken = process.env.BLOB_READ_WRITE_TOKEN || ''
+    // Only add the Vercel Blob plugin when a valid token is available
+    if (blobToken.startsWith('vercel_blob_rw_')) {
+      return [
+        vercelBlobStorage({
+          collections: {
+            media: true,
+            downloads: true,
+          },
+          token: blobToken,
+        }),
+      ]
+    }
+    return []
+  })(),
 
   secret: process.env.PAYLOAD_SECRET ?? 'archangels-parish-dev-secret-change-in-production',
 
