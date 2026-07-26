@@ -1,6 +1,7 @@
 import { RootPage, generatePageMetadata } from '@payloadcms/next/views'
 import { importMap } from '../../importMap'
 import type { Metadata } from 'next'
+import config from '@payload-config'
 
 type Args = {
   params: Promise<{ segments: string[] }>
@@ -11,7 +12,7 @@ export async function generateMetadata({ params, searchParams }: Args): Promise<
   const resolvedParams = await params
   const resolvedSearchParams = await searchParams
   return generatePageMetadata({
-    config: import('../../../../../payload.config'),
+    config,
     params: resolvedParams,
     searchParams: resolvedSearchParams,
   })
@@ -22,7 +23,7 @@ export default async function Page({ params, searchParams }: Args) {
   const resolvedSearchParams = await searchParams
 
   return RootPage({
-    config: import('../../../../../payload.config'),
+    config,
     importMap,
     params: resolvedParams,
     searchParams: resolvedSearchParams,
