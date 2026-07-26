@@ -96,7 +96,7 @@ export default function HomePage() {
             style={{
               position: 'absolute',
               inset: 0,
-              background: 'linear-gradient(to top, rgba(10,16,32,0.92) 0%, rgba(10,16,32,0.55) 50%, rgba(10,16,32,0.3) 100%)',
+              background: 'linear-gradient(to top, rgba(10,16,32,0.95) 0%, rgba(10,16,32,0.4) 40%, rgba(10,16,32,0.1) 100%)',
             }}
           />
         </div>
@@ -178,29 +178,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div
-          style={{
-            position: 'absolute',
-            bottom: '2rem',
-            right: '2rem',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.5rem',
-            color: 'rgba(255,255,255,0.35)',
-            fontSize: '0.75rem',
-            letterSpacing: '0.1em',
-          }}
-        >
-          <span>SCROLL</span>
-          <div
-            style={{
-              width: '40px',
-              height: '1px',
-              backgroundColor: 'rgba(255,255,255,0.35)',
-            }}
-          />
-        </div>
       </section>
 
       {/* ── WELCOME FROM PARISH PRIEST ──────────────────────────────── */}
