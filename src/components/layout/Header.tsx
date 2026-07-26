@@ -101,7 +101,7 @@ export default function Header() {
           className="hidden lg:block"
         >
           <div className="container-site flex items-center justify-between py-1.5">
-            <p style={{ fontSize: '0.75rem', opacity: 0.75 }}>
+            <p style={{ fontSize: '0.75rem', opacity: 0.75, color: '#fff' }}>
               Archdiocese of Lagos · Satellite Town, Lagos, Nigeria
             </p>
             <div className="flex items-center gap-4" style={{ fontSize: '0.75rem', opacity: 0.8 }}>
