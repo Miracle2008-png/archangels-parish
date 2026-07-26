@@ -1,0 +1,354 @@
+@import "tailwindcss";
+
+/* ─── Google Fonts ─────────────────────────────────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* ─── Design Tokens ─────────────────────────────────────────────────── */
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+
+  /* Primary Palette */
+  --color-navy:         #1B2A4A;
+  --color-navy-dark:    #0F1A30;
+  --color-navy-light:   #2C3E6B;
+
+  /* Backgrounds */
+  --color-warm-white:   #FAFAF7;
+  --color-cream:        #F5F0E8;
+  --color-card:         #FFFFFF;
+
+  /* Text */
+  --color-near-black:   #1A1A1A;
+  --color-stone:        #8B8478;
+  --color-stone-light:  #B5AFA7;
+
+  /* Accent */
+  --color-gold:         #C9A84C;
+  --color-gold-light:   #DEC06E;
+  --color-gold-dark:    #A8852E;
+  --color-burgundy:     #6B2737;
+  --color-burgundy-light:#8A3347;
+
+  /* Liturgical */
+  --color-forest:       #2D5016;
+  --color-purple:       #4A2C5E;
+  --color-soft-red:     #C0392B;
+
+  /* Border */
+  --color-border:       #E8E3DC;
+  --color-border-light: #F0EBE3;
+
+  /* Shadows */
+  --shadow-sm:  0 1px 3px 0 rgb(27 42 74 / 0.06);
+  --shadow-md:  0 4px 16px 0 rgb(27 42 74 / 0.08);
+  --shadow-lg:  0 12px 40px 0 rgb(27 42 74 / 0.12);
+  --shadow-xl:  0 24px 60px 0 rgb(27 42 74 / 0.16);
+}
+
+/* ─── Base Reset & Defaults ────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--color-warm-white);
+  color: var(--color-near-black);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.7;
+  min-height: 100dvh;
+}
+
+/* ─── Typography Base ───────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--color-navy);
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 400; }
+h2 { font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 400; }
+h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
+h4 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
+h5 { font-size: 1.125rem; font-family: var(--font-sans); font-weight: 600; letter-spacing: 0; }
+
+p {
+  font-family: var(--font-sans);
+  line-height: 1.75;
+  color: var(--color-near-black);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img, video {
+  max-width: 100%;
+  display: block;
+}
+
+/* ─── Selection ─────────────────────────────────────────────────────── */
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-navy-dark);
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-warm-white); }
+::-webkit-scrollbar-thumb { background: var(--color-stone-light); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-stone); }
+
+/* ─── Utility Classes ───────────────────────────────────────────────── */
+.font-serif   { font-family: var(--font-serif); }
+.font-sans    { font-family: var(--font-sans); }
+
+.text-navy        { color: var(--color-navy); }
+.text-gold        { color: var(--color-gold); }
+.text-stone       { color: var(--color-stone); }
+.text-burgundy    { color: var(--color-burgundy); }
+.bg-navy          { background-color: var(--color-navy); }
+.bg-navy-dark     { background-color: var(--color-navy-dark); }
+.bg-cream         { background-color: var(--color-cream); }
+.bg-warm-white    { background-color: var(--color-warm-white); }
+.border-gold      { border-color: var(--color-gold); }
+
+.container-site {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 3rem);
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 3rem);
+}
+
+/* ─── Section Spacing ───────────────────────────────────────────────── */
+.section-py {
+  padding-top: clamp(4rem, 8vw, 7rem);
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+.section-py-sm {
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+/* ─── Gold Divider ──────────────────────────────────────────────────── */
+.divider-gold {
+  display: block;
+  width: 3rem;
+  height: 2px;
+  background-color: var(--color-gold);
+  margin-bottom: 1.5rem;
+}
+
+/* ─── Section Label ─────────────────────────────────────────────────── */
+.section-label {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+/* ─── Card Base ─────────────────────────────────────────────────────── */
+.card-base {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.card-base:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* ─── Button Styles ─────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--color-navy);
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: var(--color-navy-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-gold {
+  background-color: var(--color-gold);
+  color: var(--color-navy-dark);
+}
+.btn-gold:hover {
+  background-color: var(--color-gold-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-navy);
+  border: 1.5px solid var(--color-navy);
+}
+.btn-outline:hover {
+  background-color: var(--color-navy);
+  color: #fff;
+}
+
+.btn-outline-white {
+  background-color: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.6);
+}
+.btn-outline-white:hover {
+  background-color: rgba(255,255,255,0.12);
+  border-color: #fff;
+}
+
+.btn-lg {
+  padding: 1rem 2.25rem;
+  font-size: 0.9375rem;
+}
+
+.btn-sm {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.8125rem;
+}
+
+/* ─── Image Placeholder ─────────────────────────────────────────────── */
+.img-placeholder {
+  background-color: var(--color-cream);
+  border: 1px dashed var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-stone-light);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+/* ─── Focus Styles (WCAG AA) ────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* ─── Reduced Motion ─────────────────────────────────────────────────  */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* ─── Prose Overrides ───────────────────────────────────────────────── */
+.prose {
+  --tw-prose-body: var(--color-near-black);
+  --tw-prose-headings: var(--color-navy);
+  --tw-prose-links: var(--color-navy);
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+
+/* ─── Nav Link ──────────────────────────────────────────────────────── */
+.nav-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-near-black);
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 0.2s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 1.5px;
+  background-color: var(--color-gold);
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-navy);
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: var(--color-navy);
+}
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ─── Page Hero ─────────────────────────────────────────────────────── */
+.page-hero {
+  background-color: var(--color-navy);
+  color: #fff;
+  padding-top: clamp(5rem, 10vw, 8rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A84C' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 1;
+}
+
+/* ─── Announcement Banner ───────────────────────────────────────────── */
+.announcement-banner {
+  background-color: var(--color-gold);
+  color: var(--color-navy-dark);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding: 0.625rem 0;
+  text-align: center;
+}
