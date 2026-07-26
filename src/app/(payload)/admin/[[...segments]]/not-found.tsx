@@ -9,7 +9,7 @@ export default async function NotFound({ params, searchParams }: Args) {
   const { segments } = await params
   const { searchParams: sp } = { searchParams: await searchParams }
   return NotFoundPage({
-    config: import('../../../../../../payload.config'),
+    config: import('../../../../../payload.config'),
     params: { segments },
     searchParams: sp,
   })

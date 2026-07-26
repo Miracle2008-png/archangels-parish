@@ -8,7 +8,7 @@ type Args = {
 
 export default async function Layout({ children }: Args) {
   return RootLayout({
-    config: import('../../../../payload.config'),
+    config: import('../../../payload.config'),
     importMap,
     children,
   })
