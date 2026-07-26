@@ -1,7 +1,7 @@
 import { RootPage, generatePageMetadata } from '@payloadcms/next/views'
 import { importMap } from '../../importMap'
 import type { Metadata } from 'next'
-import config from '@payload-config'
+import type { SanitizedConfig } from 'payload'
 
 type Args = {
   params: Promise<{ segments: string[] }>
@@ -9,23 +9,18 @@ type Args = {
 }
 
 export async function generateMetadata({ params, searchParams }: Args): Promise<Metadata> {
-  const resolvedParams = await params
-  const resolvedSearchParams = await searchParams
   return generatePageMetadata({
-    config,
-    params: resolvedParams,
-    searchParams: resolvedSearchParams,
+    config: import('../../../../../payload.config').then((m) => m.default) as unknown as Promise<SanitizedConfig>,
+    params,
+    searchParams,
   })
 }
 
 export default async function Page({ params, searchParams }: Args) {
-  const resolvedParams = await params
-  const resolvedSearchParams = await searchParams
-
   return RootPage({
-    config,
+    config: import('../../../../../payload.config').then((m) => m.default) as unknown as Promise<SanitizedConfig>,
     importMap,
-    params: resolvedParams,
-    searchParams: resolvedSearchParams,
+    params,
+    searchParams,
   })
 }

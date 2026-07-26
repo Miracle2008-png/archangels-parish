@@ -89,12 +89,9 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ sl
               <Link href="/news" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.875rem', fontWeight: 600, color: 'var(--color-navy)', textDecoration: 'none' }}>
                 <ArrowLeft size={16} /> Back to News
               </Link>
-              <button
-                onClick={() => navigator.share?.({ title: document.title, url: window.location.href })}
-                style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.875rem', fontWeight: 600, color: 'var(--color-navy)', background: 'none', border: 'none', cursor: 'pointer' }}
-              >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.875rem', fontWeight: 600, color: 'var(--color-navy)' }}>
                 <Share2 size={16} /> Share
-              </button>
+              </div>
             </div>
           </article>
 

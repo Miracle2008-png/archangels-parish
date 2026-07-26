@@ -347,7 +347,6 @@ export default function MassTimesPage() {
               </div>
               <button
                 className="btn btn-gold"
-                onClick={() => alert('[PLACEHOLDER] — Download link to be added once timetable PDF is uploaded to the CMS.')}
               >
                 <Download size={16} />
                 Download PDF Timetable

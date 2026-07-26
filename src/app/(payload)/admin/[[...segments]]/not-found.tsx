@@ -1,5 +1,6 @@
 import { NotFoundPage } from '@payloadcms/next/views'
-import config from '@payload-config'
+import { importMap } from '../../importMap'
+import type { SanitizedConfig } from 'payload'
 
 type Args = {
   params: Promise<{ segments: string[] }>
@@ -7,11 +8,10 @@ type Args = {
 }
 
 export default async function NotFound({ params, searchParams }: Args) {
-  const { segments } = await params
-  const { searchParams: sp } = { searchParams: await searchParams }
   return NotFoundPage({
-    config,
-    params: { segments },
-    searchParams: sp,
+    config: import('../../../../../payload.config').then((m) => m.default) as unknown as Promise<SanitizedConfig>,
+    importMap,
+    params,
+    searchParams,
   })
 }

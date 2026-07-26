@@ -161,16 +161,6 @@ export default function HomePage() {
                     WebkitBackdropFilter: 'blur(8px)',
                     textDecoration: 'none',
                   }}
-                  onMouseEnter={(e) => {
-                    const el = e.currentTarget
-                    el.style.backgroundColor = 'rgba(201,168,76,0.15)'
-                    el.style.borderColor = 'rgba(201,168,76,0.5)'
-                  }}
-                  onMouseLeave={(e) => {
-                    const el = e.currentTarget
-                    el.style.backgroundColor = 'rgba(255,255,255,0.08)'
-                    el.style.borderColor = 'rgba(255,255,255,0.15)'
-                  }}
                 >
                   <Icon size={20} color="var(--color-gold)" strokeWidth={1.5} />
                   <span style={{ color: '#fff', fontWeight: 600, fontSize: '0.9375rem' }}>{label}</span>

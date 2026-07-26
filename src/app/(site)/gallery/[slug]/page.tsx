@@ -65,8 +65,6 @@ export default async function GalleryAlbumPage({ params }: { params: Promise<{ s
                   cursor: 'pointer',
                   transition: 'transform 0.2s ease',
                 }}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.transform = 'scale(1.02)' }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.transform = 'scale(1)' }}
               >
                 <ImagePlaceholder label={`Photo ${i}`} height="100%" />
               </div>
