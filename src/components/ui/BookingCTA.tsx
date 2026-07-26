@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Cross, Sparkles } from 'lucide-react'
 
 export default function BookingCTA() {
   return (
@@ -48,7 +48,7 @@ export default function BookingCTA() {
               flexShrink: 0,
             }}
           >
-            ✝
+            <Cross size={22} color="rgba(255,255,255,0.9)" strokeWidth={1.5} />
           </div>
           <div>
             <p style={{ color: '#fff', fontWeight: 700, fontSize: '1.125rem', marginBottom: '0.25rem' }}>
@@ -90,7 +90,7 @@ export default function BookingCTA() {
               flexShrink: 0,
             }}
           >
-            🙏
+            <Sparkles size={22} color="rgba(255,255,255,0.9)" strokeWidth={1.5} />
           </div>
           <div>
             <p style={{ color: '#fff', fontWeight: 700, fontSize: '1.125rem', marginBottom: '0.25rem' }}>
