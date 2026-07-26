@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { Phone, Mail, MapPin } from 'lucide-react'
+import Image from 'next/image'
 
 const QUICK_LINKS = [
   { label: 'About the Parish', href: '/about' },
@@ -46,13 +47,17 @@ export default function Footer() {
                   height: '42px',
                   borderRadius: '50%',
                   border: '1.5px solid rgba(201,168,76,0.5)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
+                  overflow: 'hidden',
                   flexShrink: 0,
+                  position: 'relative'
                 }}
               >
-                <span style={{ color: 'var(--color-gold)', fontFamily: 'serif', fontSize: '1.25rem', fontStyle: 'italic' }}>A</span>
+                <Image 
+                  src="/logo.jpg" 
+                  alt="Archangels Catholic Church Logo"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                />
               </div>
               <div>
                 <p

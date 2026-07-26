@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState, useEffect, useRef } from 'react'
 import { Menu, X, ChevronDown, Cross } from 'lucide-react'
+import Image from 'next/image'
 
 const NAV_ITEMS = [
   { label: 'Home', href: '/' },
@@ -127,17 +128,22 @@ export default function Header() {
             >
               <div
                 style={{
-                  width: '40px',
-                  height: '40px',
-                  backgroundColor: 'var(--color-navy)',
+                  width: '42px',
+                  height: '42px',
                   borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
+                  overflow: 'hidden',
                   flexShrink: 0,
+                  border: '1.5px solid var(--color-gold)',
+                  position: 'relative'
                 }}
               >
-                <Cross size={18} color="var(--color-gold)" strokeWidth={1.5} />
+                <Image 
+                  src="/logo.jpg" 
+                  alt="Archangels Catholic Church Logo"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  priority
+                />
               </div>
               <div>
                 <p

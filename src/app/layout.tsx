@@ -11,6 +11,10 @@ export const metadata: Metadata = {
     'Archangels Catholic Church, Satellite Town — a parish family in the Archdiocese of Lagos, Nigeria. Mass times, sacraments, ministries, and parish news.',
   keywords: ['Catholic church Lagos', 'Archangels Catholic Church', 'Satellite Town parish', 'Archdiocese of Lagos', 'Mass times Lagos', 'Catholic parish Nigeria'],
   authors: [{ name: 'Archangels Catholic Church' }],
+  icons: {
+    icon: '/logo.jpg',
+    apple: '/logo.jpg',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_NG',
