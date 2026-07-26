@@ -32,6 +32,12 @@ export default buildConfig({
     meta: {
       titleSuffix: '— Archangels Catholic Church',
     },
+    components: {
+      graphics: {
+        Logo: '@/payload/components/Logo#Logo',
+        Icon: '@/payload/components/Logo#Icon',
+      },
+    },
     livePreview: {
       breakpoints: [
         { label: 'Mobile', name: 'mobile', width: 375, height: 667 },

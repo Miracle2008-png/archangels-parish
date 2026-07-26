@@ -73,6 +73,10 @@ export default function Footer() {
             </div>
 
             <p style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75, marginBottom: '1.5rem' }}>
+              <span style={{ color: 'var(--color-gold)', fontStyle: 'italic' }}>
+                "With Him - There is Plentiful Redemption. The Archangels - Be Our Defenders."
+              </span>
+              <br /><br />
               Archangels Catholic Church is a vibrant parish in the Archdiocese of Lagos, 
               serving the faithful in Satellite Town and the surrounding communities.
             </p>
