@@ -7,6 +7,7 @@ import Image from 'next/image'
 const QUICK_LINKS = [
   { label: 'About the Parish', href: '/about' },
   { label: 'Mass Times', href: '/mass-times' },
+  { label: 'Book a Mass / Thanksgiving', href: '/booking' },
   { label: 'Sacraments', href: '/sacraments' },
   { label: 'Ministries', href: '/ministries' },
   { label: 'News & Announcements', href: '/news' },
