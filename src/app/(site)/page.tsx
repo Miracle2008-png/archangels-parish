@@ -4,6 +4,7 @@ import {
   Clock, Heart, Phone, HandHeart, ChevronRight,
   Calendar, BookOpen, Users, ArrowRight, MapPin,
 } from 'lucide-react'
+import Image from 'next/image'
 import ImagePlaceholder from '@/components/ui/ImagePlaceholder'
 import SectionHeader from '@/components/ui/SectionHeader'
 import { jsonLd, localBusinessSchema, websiteSchema } from '@/lib/structured-data'
@@ -83,7 +84,13 @@ export default function HomePage() {
             backgroundColor: 'var(--color-navy)',
           }}
         >
-          <ImagePlaceholder label="Parish Exterior Photo" height="100%" />
+          <Image
+            src="/church-building.jpg"
+            alt="Archangels Catholic Church Exterior"
+            fill
+            priority
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
+          />
           {/* Overlay gradient */}
           <div
             style={{
