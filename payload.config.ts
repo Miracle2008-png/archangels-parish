@@ -31,7 +31,6 @@ export default buildConfig({
     user: Users.slug,
     meta: {
       titleSuffix: '— Archangels Catholic Church',
-      favicon: '/favicon.ico',
     },
     livePreview: {
       breakpoints: [
