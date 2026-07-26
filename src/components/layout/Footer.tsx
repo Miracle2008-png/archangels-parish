@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Cross, Phone, Mail, MapPin, Facebook, Youtube, Instagram } from 'lucide-react'
+import { Phone, Mail, MapPin, Facebook, Youtube, Instagram } from 'lucide-react'
 
 const QUICK_LINKS = [
   { label: 'About the Parish', href: '/about' },
@@ -50,7 +50,7 @@ export default function Footer() {
                   flexShrink: 0,
                 }}
               >
-                <Cross size={18} color="var(--color-gold)" strokeWidth={1.5} />
+                <span style={{ color: 'var(--color-gold)', fontFamily: 'serif', fontSize: '1.25rem', fontStyle: 'italic' }}>A</span>
               </div>
               <div>
                 <p
