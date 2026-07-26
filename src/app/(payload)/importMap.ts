@@ -2,4 +2,9 @@
 // It maps component imports for the admin panel.
 // You can add custom components here if needed.
 
-export const importMap = {}
+import { Logo, Icon } from '@/payload/components/Logo'
+
+export const importMap = {
+  '@/payload/components/Logo#Logo': Logo,
+  '@/payload/components/Logo#Icon': Icon,
+}
