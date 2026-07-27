@@ -1,5 +1,6 @@
 import { buildConfig } from 'payload'
 import { vercelPostgresAdapter } from '@payloadcms/db-vercel-postgres'
+import { sqliteAdapter } from '@payloadcms/db-sqlite'
 import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import path from 'path'
@@ -63,11 +64,17 @@ export default buildConfig({
     Homepage,
   ],
 
-  db: vercelPostgresAdapter({
-    pool: {
-      connectionString: process.env.POSTGRES_URL || process.env.DATABASE_URL || '',
-    },
-  }),
+  db: process.env.POSTGRES_URL || process.env.DATABASE_URL
+    ? vercelPostgresAdapter({
+        pool: {
+          connectionString: process.env.POSTGRES_URL || process.env.DATABASE_URL || '',
+        },
+      })
+    : sqliteAdapter({
+        client: {
+          url: process.env.DATABASE_URI || 'file:./archangels.db',
+        },
+      }),
 
   plugins: (() => {
     const blobToken = process.env.BLOB_READ_WRITE_TOKEN || ''
