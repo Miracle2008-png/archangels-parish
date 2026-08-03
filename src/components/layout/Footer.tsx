@@ -231,7 +231,7 @@ export default function Footer() {
                 Sunday Masses
               </p>
               <p style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.7 }}>
-                [PLACEHOLDER — Mass times to be updated]
+                6:30am, 9:00am, 11:30am &amp; 6:30pm
               </p>
               <Link
                 href="/mass-times"

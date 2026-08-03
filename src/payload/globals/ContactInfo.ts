@@ -26,7 +26,10 @@ export const ContactInfo: GlobalConfig = {
         { name: 'label', type: 'text', label: 'Label', admin: { description: 'e.g. "Parish Office", "Emergency"' } },
         { name: 'number', type: 'text', required: true },
       ],
-      defaultValue: [{ label: 'Parish Office', number: '0806 569 0094' }],
+      defaultValue: [
+        { label: 'Parish Office', number: '0806 569 0094' },
+        { label: 'Parish Office (Alt)', number: '0816 154 8538' },
+      ],
     },
     {
       name: 'whatsapp',
@@ -48,8 +51,8 @@ export const ContactInfo: GlobalConfig = {
         { name: 'hours', type: 'text', required: true, label: 'Hours', admin: { description: 'e.g. "8:00 AM – 4:00 PM"' } },
       ],
       defaultValue: [
-        { days: 'Monday – Friday', hours: '[PLACEHOLDER]' },
-        { days: 'Saturday', hours: '[PLACEHOLDER]' },
+        { days: 'Mon, Tue, Wed, Fri', hours: '9:00am–2:00pm, 3:00pm–5:00pm' },
+        { days: 'Thursday', hours: 'Closed' },
         { days: 'Sunday', hours: 'Closed (worship day)' },
       ],
     },
@@ -59,7 +62,7 @@ export const ContactInfo: GlobalConfig = {
       label: 'Emergency / Priest on Call',
       fields: [
         { name: 'label', type: 'text', defaultValue: 'Priest on Call' },
-        { name: 'number', type: 'text', label: 'Phone Number' },
+        { name: 'number', type: 'text', label: 'Phone Number', defaultValue: '0806 569 0094' },
         { name: 'note', type: 'text', label: 'Note', defaultValue: 'For anointing of the sick and emergencies only.' },
       ],
     },

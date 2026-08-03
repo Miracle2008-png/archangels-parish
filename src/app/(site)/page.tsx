@@ -247,8 +247,8 @@ export default function HomePage() {
               }}
             >
               <p style={{ fontSize: '1.1rem', color: 'var(--color-stone)', lineHeight: 1.8, fontStyle: 'italic' }}>
-                &ldquo;[PLACEHOLDER — Welcome message from the Parish Priest will be added here. 
-                Please provide the name and a brief message from the priest.]&rdquo;
+                &ldquo;As one family of God, our parish exists for faith and human development,
+                parish and community outreach, and living the Gospel of Christ.&rdquo;
               </p>
             </div>
 
@@ -272,7 +272,7 @@ export default function HomePage() {
               </div>
               <div>
                 <p style={{ fontWeight: 600, color: 'var(--color-navy)', fontSize: '0.9375rem' }}>
-                  [PLACEHOLDER — Parish Priest Name]
+                  Rev. Fr. Dr. Godfrey Udeh, C.Ss.R
                 </p>
                 <p style={{ fontSize: '0.8125rem', color: 'var(--color-stone)' }}>Parish Priest</p>
               </div>

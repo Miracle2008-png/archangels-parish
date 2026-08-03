@@ -19,21 +19,31 @@ export const metadata: Metadata = {
 
 const PRIESTS = [
   {
-    name: '[PLACEHOLDER — Parish Priest Name]',
+    name: 'Rev. Fr. Dr. Godfrey Udeh, C.Ss.R',
     title: 'Parish Priest',
-    bio: 'Details about the Parish Priest will be added here once information is provided.',
+    bio: 'A Redemptorist priest serving as Parish Priest of Saints Michael, Raphael & Gabriel Catholic Church. Available at the parish office on Tuesdays.',
   },
   {
-    name: '[PLACEHOLDER — Assistant Priest Name]',
-    title: 'Assistant Priest',
-    bio: 'Details about the Assistant Priest will be added here once information is provided.',
+    name: 'Rev. Fr. Kingsley Ekezie, C.Ss.R',
+    title: 'Associate Priest',
+    bio: 'A Redemptorist priest serving the parish community. Available at the parish office on Mondays.',
+  },
+  {
+    name: 'Rev. Fr. Moses Akpough, C.Ss.R',
+    title: 'Associate Priest',
+    bio: 'A Redemptorist priest serving the parish community. Available at the parish office on Wednesdays.',
+  },
+  {
+    name: 'Rev. Fr. Benedict Anyanwu, C.Ss.R',
+    title: 'Associate Priest',
+    bio: 'A Redemptorist priest serving the parish community. Available at the parish office on Fridays.',
   },
 ]
 
 const STAFF = [
   { name: '[PLACEHOLDER]', role: 'Parish Secretary', department: 'Parish Office' },
   { name: '[PLACEHOLDER]', role: 'Finance Officer', department: 'Finance' },
-  { name: '[PLACEHOLDER]', role: 'Catechist', department: 'Catechesis' },
+  { name: 'Rev. Sr. Augustina Alozie, RSC', role: 'Director', department: 'Religious Education & Catechetics' },
 ]
 
 const TIMELINE = [
@@ -234,7 +244,7 @@ export default function AboutPage() {
               {
                 icon: BookOpen,
                 title: 'Our Mission',
-                text: '[PLACEHOLDER — Parish mission statement. Describe what this parish exists to do: proclaim the Gospel, celebrate the sacraments, serve the community, etc.]',
+                text: 'As one family of God, our parish exists for faith and human development, parish and community outreach, and living the Gospel of Christ.',
               },
               {
                 icon: Heart,

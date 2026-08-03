@@ -16,25 +16,26 @@ export const metadata: Metadata = {
   },
 }
 
-// All marked [PLACEHOLDER] — admin fills via Payload CMS
 const SUNDAY_MASSES = [
-  { time: '[PLACEHOLDER]', language: '[PLACEHOLDER]', notes: '' },
-  { time: '[PLACEHOLDER]', language: '[PLACEHOLDER]', notes: '' },
-  { time: '[PLACEHOLDER]', language: '[PLACEHOLDER]', notes: '' },
+  { time: '6:30am', notes: 'Main Church' },
+  { time: '9:00am', notes: 'Main Church' },
+  { time: '11:30am', notes: 'Main Church' },
+  { time: '6:30pm', notes: 'Main Church' },
 ]
 
 const WEEKDAY_MASSES = [
-  { day: 'Monday', time: '[PLACEHOLDER]', notes: '' },
-  { day: 'Tuesday', time: '[PLACEHOLDER]', notes: '' },
-  { day: 'Wednesday', time: '[PLACEHOLDER]', notes: '' },
-  { day: 'Thursday', time: '[PLACEHOLDER]', notes: '' },
-  { day: 'Friday', time: '[PLACEHOLDER]', notes: '' },
-  { day: 'Saturday', time: '[PLACEHOLDER]', notes: '' },
+  { day: 'Monday', time: '6:30am, 12noon, 6:30pm', notes: '' },
+  { day: 'Tuesday', time: '6:30am, 12noon', notes: 'SCC 7pm / Wake Keep 6pm' },
+  { day: 'Wednesday', time: '6:30am, 12noon, 6:30pm', notes: '' },
+  { day: 'Thursday', time: '6:30am', notes: '' },
+  { day: 'Friday', time: '6:30am, 12noon, 6:30pm', notes: '' },
+  { day: 'Saturday', time: '6:30am, 6:00pm', notes: 'No mid-day Mass. Evening Mass fulfils the Sunday obligation' },
 ]
 
 const CONFESSION_TIMES = [
-  { day: '[PLACEHOLDER]', time: '[PLACEHOLDER]', notes: '' },
-  { day: '[PLACEHOLDER]', time: '[PLACEHOLDER]', notes: 'By appointment' },
+  { day: 'Monday – Friday', time: 'After the morning Mass', notes: '' },
+  { day: 'Saturday', time: 'After the morning Mass & 5:00pm', notes: '' },
+  { day: 'Sick calls', time: 'Anytime', notes: 'Call the parish office' },
 ]
 
 const HOLY_DAYS = [
@@ -46,12 +47,13 @@ const HOLY_DAYS = [
 ]
 
 const ADORATION = [
-  { day: '[PLACEHOLDER]', time: '[PLACEHOLDER]', notes: '' },
+  { day: 'Sunday', time: '5:45pm', notes: 'Benediction of the Blessed Sacrament' },
+  { day: 'Wednesday', time: '6:00pm', notes: 'Mother of Perpetual Help Devotion with Rosary Procession' },
 ]
 
 const OFFICE_HOURS = [
-  { days: 'Monday – Friday', hours: '[PLACEHOLDER]' },
-  { days: 'Saturday', hours: '[PLACEHOLDER]' },
+  { days: 'Mon, Tue, Wed, Fri', hours: '9:00am–2:00pm, 3:00pm–5:00pm' },
+  { days: 'Thursday', hours: 'Closed' },
   { days: 'Sunday', hours: 'Closed (worship day)' },
 ]
 
@@ -159,7 +161,6 @@ export default function MassTimesPage() {
             rows={SUNDAY_MASSES}
             columns={[
               { key: 'time', label: 'Time' },
-              { key: 'language', label: 'Language' },
               { key: 'notes', label: 'Notes' },
             ]}
           />

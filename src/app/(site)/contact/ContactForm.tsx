@@ -2,11 +2,11 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Send, MessageCircle, AlertTriangle, MapPin, Phone, Mail, Clock } from 'lucide-react'
+import { Send, MessageCircle, AlertTriangle, MapPin, Phone, Mail, Clock, Globe } from 'lucide-react'
 
 const OFFICE_HOURS = [
-  { days: 'Monday – Friday', hours: '[PLACEHOLDER]' },
-  { days: 'Saturday', hours: '[PLACEHOLDER]' },
+  { days: 'Mon, Tue, Wed, Fri', hours: '9:00am–2:00pm, 3:00pm–5:00pm' },
+  { days: 'Thursday', hours: 'Closed' },
   { days: 'Sunday', hours: 'Closed (worship day)' },
 ]
 
@@ -60,7 +60,7 @@ export default function ContactForm() {
                 content: (
                   <>
                     <p style={{ fontSize: '0.9rem', color: 'var(--color-stone)', lineHeight: 1.7 }}>
-                      1 Mission Street<br />Satellite Town, Lagos<br />Nigeria
+                      1 Mission Street, P.O. Box 541<br />Satellite Town, Lagos<br />Nigeria
                     </p>
                     <a href="https://maps.google.com/?q=1+Mission+Street+Satellite+Town+Lagos"
                       target="_blank" rel="noopener noreferrer"
@@ -74,17 +74,37 @@ export default function ContactForm() {
                 icon: Phone, bg: 'var(--color-navy)', iconColor: 'var(--color-gold)',
                 label: 'Phone',
                 content: (
-                  <a href="tel:+2348065690094" style={{ fontSize: '1rem', color: 'var(--color-near-black)', fontWeight: 500 }}>
-                    0806 569 0094
-                  </a>
+                  <p style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                    <a href="tel:+2348065690094" style={{ fontSize: '1rem', color: 'var(--color-near-black)', fontWeight: 500 }}>
+                      0806 569 0094
+                    </a>
+                    <a href="tel:+2348161548538" style={{ fontSize: '1rem', color: 'var(--color-near-black)', fontWeight: 500 }}>
+                      0816 154 8538
+                    </a>
+                  </p>
                 ),
               },
               {
                 icon: Mail, bg: 'var(--color-navy)', iconColor: 'var(--color-gold)',
                 label: 'Email',
                 content: (
-                  <a href="mailto:archangels_sat@yahoo.com" style={{ fontSize: '0.9375rem', color: 'var(--color-near-black)' }}>
-                    archangels_sat@yahoo.com
+                  <p style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                    <a href="mailto:info@archangelsparishsat.com" style={{ fontSize: '0.9375rem', color: 'var(--color-near-black)' }}>
+                      info@archangelsparishsat.com
+                    </a>
+                    <a href="mailto:archangels_sat@yahoo.com" style={{ fontSize: '0.9375rem', color: 'var(--color-near-black)' }}>
+                      archangels_sat@yahoo.com
+                    </a>
+                  </p>
+                ),
+              },
+              {
+                icon: Globe, bg: 'var(--color-navy)', iconColor: 'var(--color-gold)',
+                label: 'Facebook',
+                content: (
+                  <a href="https://www.facebook.com/archangelsparishsat1" target="_blank" rel="noopener noreferrer"
+                    style={{ fontSize: '0.9375rem', color: 'var(--color-near-black)' }}>
+                    facebook.com/archangelsparishsat1
                   </a>
                 ),
               },
@@ -107,7 +127,7 @@ export default function ContactForm() {
               </div>
               <div>
                 <p style={{ fontWeight: 600, color: 'var(--color-navy)', marginBottom: '0.375rem' }}>WhatsApp</p>
-                <p style={{ fontSize: '0.9375rem', color: 'var(--color-near-black)', marginBottom: '0.75rem' }}>+234 806 569 0094</p>
+                <p style={{ fontSize: '0.9375rem', color: 'var(--color-near-black)', marginBottom: '0.75rem' }}>+234 806 569 0094 or +234 816 154 8538</p>
                 <a href="https://wa.me/2348065690094" target="_blank" rel="noopener noreferrer"
                   className="btn btn-sm"
                   style={{ display: 'inline-flex', backgroundColor: '#25D366', color: '#fff', textDecoration: 'none' }}>
